@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1  Excersies</title>
+</head>
+<body>
+<script>
+//Question 01:
+ let print=function (func){
+     console.log("Hello World!!!");
+     func('Kethaka');
+
+ }
+
+ let second=function(name){
+     console.log(`Welcome ${name} !!!`)
+ }
+print(second);
+
+ //Question 02:
+
+let student={
+  name:"Kamal Perera",
+  Age:23,
+    Address:"wadduwa"
+};
+
+console.log(student.name)
+
+
+//Question 03
+
+window.VehicleName='Toyota';
+
+function printVehicleName(){
+    console.log(`Vehicle name ${this.VehicleName}`);
+}
+
+let vehicle={
+  VehicleName:"Lambogini",
+  getVehicleName:printVehicleName
+
+};
+
+printVehicleName();
+
+vehicle.getVehicleName();
+
+//Question 04
+
+let tax=function (){
+    let amount=25000;
+    let percentage=0.07;
+   return function calTax(){
+       return amount+amount*percentage;
+   }
+};
+var getTax=tax();
+
+console.log(getTax())
+
+//Question 05
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function (response){
+    return response.json();
+}).then(function (data){
+    console.log(data)
+})
+</script>
+</body>
+</html>
