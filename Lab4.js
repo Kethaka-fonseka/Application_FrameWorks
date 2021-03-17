@@ -38,6 +38,15 @@ readStream.on(`data`,function(data){
 });
 
 
+//Question 05
+const http=require('http');
+
+http.createServer((req, res) =>{
+    res.setHeader('Content-Type','text/html');
+    res.write('<h1>Hello Wolrd</h1>')
+    res.close;
+} ).listen(3000);
+
 
 
 
